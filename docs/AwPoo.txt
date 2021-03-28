@@ -1,0 +1,91 @@
+Concept
+
+Memory (drinking) Game
+
+8 lighted buttons, one for each finger on each hand
+
+* buttons light up for time (based on level of difficulty)
+* a timer starts counting down. 
+* Player has until timer runs out to reproduce the pattern. 
+* Pressing buttons toggles button state (off/on)
+
+PLAN
+
+External USB device (RPi Pico based)
+https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython
+
+8 led buttons
+joystick
+Select button
+Go button (PWM LED button - pulse when game is ready to go)
+Countdown timer display (https://www.adafruit.com/product/1110 ? ) - I2C (two pins)
+
+*** This could control the display, joystick and select button with just two I2C- (need only 10 more GPIO pins)
+Player name Display?
+
+
+Parts list:
+* Raspberry Pi Pico (out of stock) https://www.adafruit.com/product/4864
+* lighted buttons: https://www.adafruit.com/product/491 (See "may we also suggest")
+* LCD backpack: https://www.adafruit.com/product/1110
+* Joystick: https://www.adafruit.com/product/480
+* Select button: https://www.adafruit.com/product/1445 or https://www.adafruit.com/product/1503
+* Go Button: https://www.adafruit.com/product/491 (See "may we also suggest")
+  --- https://www.adafruit.com/product/3487
+
+tutorials:
+https://learn.adafruit.com/adafruit-16x2-character-lcd-plus-keypad-for-raspberry-pi/download
+https://learn.adafruit.com/retro-gaming-with-raspberry-pi/adding-controls-hardware
+
+
+--------------------------------------------------------------------------------
+
+ORIGINAL PLAN:
+Components
+
+- Hardware
+* raspberry Pi
+* Screen
+* custom usb(?) device (AwPoo device):
+** 8 led button
+** countdown timer display
+** joystick (for selecting from lists)
+** Enter button
+** "GO!" button - lighted to indicate game is ready to go
+** microprocessor?
+* keyboard (for entering player name, etc)
+
+- Software
+* AwPoo device driver
+* Game Screen Graphics
+
+Component Sourcing
+
+Buttons: 
+https://www.adafruit.com/product/491
+
+Built In Device display:
+https://www.adafruit.com/product/772
+
+Joystick:
+https://www.adafruit.com/product/480 ***
+- https://learn.adafruit.com/retro-gaming-with-raspberry-pi/adding-controls-hardware
+REQUIRES SEPARATE "SELECT" BUTTON
+- https://www.adafruit.com/product/1445 or https://www.adafruit.com/product/1503
+-- Check what you have
+
+Also Ran: https://www.adafruit.com/product/245
+
+External Display
+* Connect to Pi HDMI so that any HDMI screen can be used
+
+FOR V1: *** For now use one that you have ***
+- https://www.adafruit.com/product/3932 - Uses ALL pins on pi :-(
+
+- https://www.adafruit.com/product/2718 -
+Nice display but:
+* Don't need touch screen
+* Uses ribbon cable to connect, need to mount pi on back of display
+--- Could build button unit as peripherial and use this
+----- one pi in each, bluetooth connection?
+
